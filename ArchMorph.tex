@@ -3,6 +3,7 @@
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{units}
 \usepackage{amssymb}
 \usepackage{graphicx}
 
@@ -16,6 +17,9 @@
 
 \date{May $14^{th}$ 2013}
 
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
 \makeatother
 
 \usepackage{babel}
@@ -251,7 +255,7 @@ fields and local relations.
 That importance of computers in design was later in the 90s confirmed
 by the apparition of evolutionnal design, e. g. design through genetic
 algorithm that use given rules of the genetic languages to compute
-new designs. That is again a botto-up approach for which the unpredictability
+new designs. That is again a bottom-up approach for which the unpredictability
 of the emerging properties is inherent to the system and its self-organisation.
 
 
@@ -360,8 +364,42 @@ circulation on shape, and finally the inverse relation.
 
 \subsection*{1 Unique shape approach}
 
+It can be useful to first describe the boundary shape in itself, since
+we will interest us later on clustering of shapes.
+
+Given a boundary shape, it is possible to extract a polygonal approximation
+(which can be exact in the case of a polygonal shape, what is the
+most used case for the following studies), and then classify it through
+the classification of the polygon.
+
+It has been shown ({[}Missing reference{]}) that a polygonal shape
+can be quite uniquely put in correspondance with 6 sets of reals numbers,
+that are, if we note, with $S$ summits of the polygons, $A_{i}(s)$
+the set of depth $i$ adjacent summits to summit $s$, $S_{i}^{j}=\{d(k,a)^{j}|k\in S,a\in A_{i}(k)\}$,
+the particular sets $S_{1}^{1}$, $S_{2}^{1}$, $S_{3}^{1}$, $S_{1}^{2}$,
+$S_{2}^{2}$ and $S_{3}^{2}$.
+
+Such a classification of polygonal shapes is the starting point of
+the following work, since we will work on unscaled polygonal shapes,
+i.e. with $\mathcal{P}$ set of polygonal shape and the equivalence
+relation on it : $\mathcal{R}:P_{1}\mathcal{R}P_{2}\iff(\exists\alpha\in\mathbb{R}^{*},S_{i}^{j}(P_{1})=\alpha S_{i}^{j}(P_{2}),i=1,2,3,j=1,2)$
+, on the quotient set $\nicefrac{\mathcal{P}}{\mathcal{R}}$. On the
+following, when we consider polygonal shapes, it will always be on
+that set.
+
 
 \subsection*{2 From circulation to shape : the inside-out approach}
+
+This approach is a modular approach, in the sense that it goes from
+inside to outside. The internal space influences the boundary shape.
+A shape can be seen as the result of an equilibrium of constraints,
+external and internal forces. That approach is the consideration of
+the internal forces only, to understand the influence of internal
+constraints (for us the internal circulation) on the boundary shapes.
+To do that, we concretely consider measures for these two parameters
+of the built environment and we plot different classes of polygonal
+shapes in the plan among these two measures, in order to try to bring
+out clustering patterns between the shapes.
 
 
 \subsection*{3 Influence of shape on circulation}
@@ -377,7 +415,45 @@ analysis, but is closely linked to it because of the underlying systemic
 approach in the design process. It presents a work of integrated design
 lead by a multi-disciplinary team at servo Stockholm and KTH, including
 researchers from several disciplines such as Design, Architecture,
-Ecology of biodiversity, Composition of built materials.
+Ecology of biodiversity, Composition of built materials. The project
+was called hydrophile, in relation to its particular aspects that
+we will see in the following.
+
+
+\subsection*{Presentation}
+
+To define the project in itself, which name is ``biotic interference'',
+we need to come back to the initial definition of these words : biotic
+means related with living organism, and interference should be taken
+here as the emergence from sharing by agents of a system. Here the
+abstract aim of the project is to create such positives interferences
+within a biotic system. It lays on the line of relationship between
+technical design (mathematical aspects) and architecture.
+
+An ubiquitous idea is the overreaching presence of nature, almost
+a symbiosis between all the dirts of nature and human being, as it
+can be feeled in the introduction sequence of the swedish film \textit{Melancholia},
+or in the artwork \textit{Partially Buried Woodshed} by \noun{Robert
+Smithson}.
+
+In the 70s, \noun{Banham} built in Los Angeles the first green roof
+building, in a exceptionaly innovative way, through the elegant combination
+of glass walls with the turf roof. He was one of the first to propose
+ecology-oriented analysis of urban systems and environmental designed
+architectural projects. He wrote theorical explanations in \cite{banham1984architecture}.
+One ambitious aim of the project is to reinvent, to rethink that concept
+of green roof, in a innovative approach called the hydrodynamic green
+roof.
+
+An overview of the project can be seen on figure {[}{]}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.3]{greenroof/7_hydrophile10new}\caption{Global view of the hydrophile}
+\end{figure}
+
+
+
+\subsection*{Particular aspects}
 
 \newpage{}
 
@@ -400,6 +476,20 @@ In fact, Aedas does in that case nothing more than complex social
 system modeling and analysis, but according to their client profile
 that are architects and designers, they market it as an evolution
 of space syntax}{]}.
+
+Examples of outlines of different projects are shown on figure {[}{]}
+(from \cite{AedasWeb}).
+
+\begin{figure}[h]
+\hfill{}\subfloat[Modeling of solar repartition for towers in Abu-Dhabi]{\includegraphics[scale=0.35]{aedas/Cladding-by-orientation-Abu-Dhabi-UAE-ResearchCladding-by-orientation-697}
+
+}\hfill{}\subfloat[Mapping of cycling flows]{\includegraphics[scale=0.09]{aedas/Cycle-to-Cannes-2011-London-ResearchCycle-to-Cannes-2011-897}}\hfill{}\hfill{}
+
+\hfill{}\subfloat[Global spatial planning solutions]{\includegraphics[scale=0.09]{aedas/Smart-Solutions-for-Spatial-Planning-London-UK-Research}}\hfill{}\hfill{}\caption{Results of Aedas projects}
+
+
+\end{figure}
+
 
 
 \subsection*{2 Examples of recent research projects}
@@ -439,6 +529,13 @@ was created, that allowed the designer to fix some points at a given
 density and observe the generated global field of density that resulted
 from these imposed values.
 
+The method used to extract the interpolating field seems to be not
+far from non-parametric estimation (see \cite{tsybakov2004introduction})
+: with $n$ given points $(M_{1},...,M_{n})$ in space and the expected
+values $(y_{1},...,y_{n})$, the problem is to find a function $f$
+such that for all $i$, $f(M_{i})=y_{i}$. That can be done for example
+by kernel estimation aggregation.
+
 
 \subsubsection*{Visibility study}
 
@@ -457,8 +554,40 @@ impact.
 
 \subsubsection*{Pedestrian traffic analysis}
 
+For the construction of a new railway station, the locations of entries
+for pedestrians had to be decided and a pedestrian flow simulation
+model was created.
+
+Concretely, it is an easely parametrizable model, for which test could
+be done on localization of ``source'' and ``sink'' points for
+pedestrian flows. From an external points of view, it is quite similar
+to the problem of distribution of densities, although here the interest
+is more on the flow quantities resulting from fixed potential points.
+But the method to solve the problem is exactly at the opposite, since
+for densities it was solved by a top-down calculation, by global mathematical
+calculations, and here the model used is a bottom-up approach, since
+it simulates the flows through individuals agents that are the pedestrian
+themselves.
+
 
 \subsubsection*{Mapping architectural controversies}
+
+Urban studies are also sociological studies, as this project testify.
+Through newspaper articles analysis, it was possible to proceed to
+``social mapping'', and identify trending subjects and social clustering
+around these key subjects.
+
+What is really interesting is to make the parallel between the social
+system and the architectural system analysis.
+
+
+\subsection*{Questions}
+
+Question : Do a global comparative knowledge emerge from all these
+research projects?
+
+Question : Was network self-generation already considered in one of
+the projects?
 
 \newpage{}
 
@@ -466,10 +595,41 @@ impact.
 \section*{\noun{{\aa}smund Izaki}, AEDAS Architects R\&D\protect \\
 Algorithmic aspects of spatial analysis}
 
+That last presentation is a short overview of computer science issues
+that occur when doing spatial analysis and investigative modeling.
+
+
+\subsection*{Complexity of algorithms}
+
+When doing computations, the speed depends on the machine on which
+they are done, but what is really important is the intrinsic complexity
+of the used algorithm. For example, there exists many ways to sort
+a set of number, and the best ones (quick sort or fusion) will have
+a mean complexity in $O(n\cdot ln(n))$, what can be assimilated to
+a linear time as a function of the size of the set, whereas bad ones
+will execute in $O(n^{2})$, what is quadratic and can quickly lead
+to impossible calculation times on big data.
+
+This aspect is particularly important in spatial analysis because
+of the size of the data and the natural complexity of graph exploration
+problems, that's why finding ``good'' algorithms for spatial analysis
+is necessary.
+
+
+\subsection*{Difficulty of problems}
+
+
+\subsection*{Examples of applications}
+
 \newpage{}
 
 
 \section*{Conclusion}
+
+The architectural solution for a project is a particular response
+to the context of the project, a local proposal in space and time,
+but it is also a proposition for architecture in general. Architectural
+theory builds itself from concrete responses to concrete cases
 
 \newpage{}
 

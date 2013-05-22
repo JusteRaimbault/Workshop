@@ -1,8 +1,33 @@
 \begin{thebibliography}{1}
 
+\bibitem{AedasWeb}
+Aedas architectes webpage, 2013.
+
+\bibitem{banham1984architecture}
+Reyner Banham.
+\newblock {\em Architecture of the Well-tempered Environment}.
+\newblock University of Chicago Press, 1984.
+
+\bibitem{calvino1978invisible}
+Italo Calvino.
+\newblock {\em Invisible cities}.
+\newblock Mariner Books, 1978.
+
 \bibitem{Jac56}
 Jane Jacobs.
 \newblock {\em The Death and Life of Great American Cities}.
 \newblock Vintage, 1956.
+
+\bibitem{smithson1974recognize}
+Alison Smithson.
+\newblock How to recognize and read mat-building: Mainstream architecture as it
+  has developed towards the mat building.
+\newblock {\em Architectural Design}, 44(9):573, 1974.
+
+\bibitem{tsybakov2004introduction}
+Alexandre~B Tsybakov.
+\newblock Introduction to nonparametric estimation. (introduction {\`a}
+  l'estimation non-param{\'e}trique.).
+\newblock 2004.
 
 \end{thebibliography}
