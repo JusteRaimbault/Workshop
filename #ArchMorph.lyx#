@@ -1532,7 +1532,13 @@ For the planning of a new business district in China, there was the need
  to decide the local densities of activities (in order to then directly
  apply it to the local design of buildings).
  For that, a tool was created, that allowed the designer to fix some points
- at a given den
+ at a given density and observe the generated global field of density that
+ resulted from these imposed values.
+\end_layout
+
+\begin_layout Standard
+The method used to extract the interpolating field seems to be not far from
+ non-parametric estimation :
 \end_layout
 
 \begin_layout Subsubsection*
